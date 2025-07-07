@@ -95,9 +95,9 @@ def export_to_markdown(messages: list[tuple[str, str]], output_path: Path) -> No
     with open(output_path, "w") as f:
         for role, content in messages:
             if role == "user":
-                f.write("## User\n")
+                f.write("---USER---\n")
             else:
-                f.write("## Assistant\n")
+                f.write("---ASSISTANT---\n")
 
             f.write(content)
             f.write("\n\n")
