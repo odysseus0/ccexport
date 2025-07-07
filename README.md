@@ -12,29 +12,11 @@ Export Claude Code (cc) chat history to markdown format. A minimal CLI tool that
 
 ## Installation
 
-### Prerequisites
-
-Make sure you have [uv](https://docs.astral.sh/uv/) installed:
 ```bash
-curl -LsSf https://astral.sh/uv/install.sh | sh
+uv tool install ccexport
 ```
 
-### Global Installation
-
-Clone and install globally:
-
-```bash
-git clone https://github.com/odysseus0/ccexport.git
-cd ccexport
-uv tool install .
-```
-
-Then use from anywhere:
-```bash
-ccexport
-```
-
-### Development
+## Development
 
 Clone the repository:
 
@@ -46,16 +28,10 @@ cd ccexport
 Run directly without installing:
 
 ```bash
-# Using uv run (recommended)
+# Using uv run
 uv run ccexport
 
-# Or with arguments
-uv run ccexport ~/projects/myapp -o session.md
-```
-
-Format and lint:
-
-```bash
+# Format and lint
 uv run --with ruff ruff check .
 uv run --with ruff ruff format .
 ```
